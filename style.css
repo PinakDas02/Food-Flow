@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 130vh;
+    background: #000;
+    background-image: url("image/background food.jpg");
+    background-size: cover;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    width: min(100% - 32px, 1100px);
+    min-height: 64px;
+    margin: 20px auto;
+    padding: 0px 16px;
+    background: #333;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 8px;
+    margin-left: 5px;
+    
+}
+.navbar a[href*="login"],
+.navbar a[href*="signup"]{
+    background: #fff;
+    color:#333;
+    border-radius: 10px;
+    padding: 4px 8px;
+    margin-left: 8px;
+    margin-right: 25px;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: white;
+    font-weight: 600;
+    margin-left: 2px;
+    
+}
+.logo img 
+{
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.navbar ul {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar li {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar a {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 6px 10px;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% / 8);
+    height: 100%;
+    background: linear-gradient(45deg, #4f1919, #ff3333);
+    border-radius: 10px;
+    padding: 8px 12px;
+    transition: transform 0.3s ease;
+}
+
+.navbar li:nth-child(1):hover ~ .indicator { transform: translateX(0); }
+.navbar li:nth-child(2):hover ~ .indicator { transform: translateX(100%); }
+.navbar li:nth-child(3):hover ~ .indicator { transform: translateX(200%); }
+.navbar li:nth-child(4):hover ~ .indicator { transform: translateX(300%); }
+.navbar li:nth-child(5):hover ~ .indicator { transform: translateX(400%); }
+.navbar li:nth-child(6):hover ~ .indicator { transform: translateX(500%); }
+
+
+@media (max-width: 760px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .navbar li {
+        flex: 1 1 25%;
+    }
+
+    .navbar .indicator {
+        display: none;
+    }
+}
+
