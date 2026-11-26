@@ -1,0 +1,364 @@
+/* BASIC RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("signup\ background.jpg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: arial, sans-serif;
+}
+
+/* MAIN CONTAINER */
+
+.main-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+/* RED DECORATIVE BACKGROUND */
+
+.main-container::before,
+.main-container::after {
+    content: none;
+}
+
+/* LEFT SECTION */
+
+.left-section {
+    width: 55%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    box-sizing: border-box;
+    padding-left: 150px;
+}
+
+/* LOGO */
+
+.logo h1 {
+    font-size: 65px;
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+.food {
+    color: white;
+}
+
+.flow {
+    color: #ff1010;
+    font-style: italic;
+}
+
+.logo p {
+    color: #ddd;
+    font-size: 16px;
+    margin-left: 20px;
+    font-style: italic;
+}
+
+/* WELCOME TEXT */
+
+.welcome {
+    margin-top: 45px;
+    margin-bottom: 35px;
+}
+
+.welcome h2 {
+    font-size: 43px;
+    font-weight: bold;
+    color: white;
+}
+
+.welcome h2 span {
+    color: red;
+    font-style: italic;
+}
+
+.welcome p {
+    color: #ddd;
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+/* FOOD IMAGE */
+
+.food-image {
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+}
+
+/* RIGHT SECTION */
+
+.right-section {
+    width: 42%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+/* SIGNUP BOX */
+
+.signup-box {
+    width: 100%;
+    max-width: 480px;
+    padding: 45px 40px 35px;
+    background: rgba(12, 12, 12, 0.96);
+    border: 2px solid #b90000;
+    border-radius: 30px;
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.18),
+        inset 0 0 20px rgba(255, 0, 0, 0.04);
+    position: relative;
+}
+
+/* SIGNUP ICON */
+
+.signup-icon {
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #ed0808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border: 5px solid #080808;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+/* HEADING */
+
+.signup-box h2 {
+    text-align: center;
+    font-size: 38px;
+    margin: 20px 0 30px;
+    color: white;
+}
+
+.signup-box h2 span {
+    color: #ff1010;
+}
+
+/* INPUT BOX */
+
+.input-box {
+    width: 100%;
+    height: 65px;
+    background: #242424;
+    border: 1px solid #444;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    margin-bottom: 17px;
+    transition: 0.3s;
+}
+
+.input-box:focus-within {
+    border-color: #ff1010;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
+}
+
+.input-box i {
+    color: white;
+    font-size: 20px;
+}
+
+.input-box input {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 17px;
+    padding: 0 20px;
+}
+
+.input-box input::placeholder {
+    color: #bbb;
+}
+
+.input-box .toggle {
+    cursor: pointer;
+    color: #ccc;
+}
+
+/* SIGNUP BUTTON */
+
+.signup-btn {
+    width: 100%;
+    height: 65px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #ff0808, #c90000);
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.signup-btn i {
+    margin-right: 10px;
+}
+
+.signup-btn:hover {
+    background: linear-gradient(90deg, #c90000, #ff0808);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.3);
+}
+
+/* OR SECTION */
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    color: #ddd;
+    justify-content: center;
+}
+
+.or span {
+    height: 1px;
+    background: #777;
+    flex: 1;
+}
+
+/* LOGIN TEXT */
+
+.login-text {
+    text-align: center;
+    color: #ddd;
+    font-size: 16px;
+}
+
+.login-text a {
+    color: #ff1010;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .main-container {
+        flex-direction: column;
+        padding: 65px 20px;
+        gap: 70px;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+
+    .left-section {
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 50px;
+    }
+
+    .logo p {
+        margin-left: 0;
+    }
+
+    .welcome h2 {
+        font-size: 32px;
+    }
+
+    .food-image img {
+        height: 230px;
+        object-position: center;
+    }
+
+    .signup-box {
+        max-width: 480px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .main-container {
+        padding: 55px 15px;
+    }
+
+    .logo h1 {
+        font-size: 43px;
+    }
+
+    .welcome h2 {
+        font-size: 27px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+    }
+
+    .signup-box {
+        padding: 40px 20px 30px;
+    }
+
+    .input-box {
+        height: 55px;
+        padding: 0 17px;
+    }
+
+    .input-box input {
+        font-size: 14px;
+    }
+
+    .signup-btn {
+        height: 55px;
+        font-size: 18px;
+    }
+}
