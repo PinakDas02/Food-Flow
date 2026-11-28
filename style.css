@@ -8,7 +8,7 @@
 body {
     min-height: 90vh;
     background: #000;
-    background-image: url("Background image.jpg.png");
+    background-image: url("image/Background image.jpg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

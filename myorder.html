@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Order | Food Flow</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="myorder.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        <i class="fa-solid fa-utensils"></i>
+        Food <span>Flow</span>
+    </a>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="myorder.html" class="active">
+            <i class="fa-solid fa-cart-shopping"></i> My Order
+        </a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">
+            <i class="fa-solid fa-user-gear"></i> Admin
+        </a>
+    </div>
+
+    <div class="nav-buttons">
+        <a href="login.html">
+            <i class="fa-solid fa-user"></i> Login
+        </a>
+        <a href="signup.html">
+            <i class="fa-solid fa-user-plus"></i> Sign Up
+        </a>
+    </div>
+
+</nav>
+
+<!-- Page Heading -->
+<section class="page-heading">
+
+    <div class="heading-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+
+    <div>
+        <h1><b> Order </b></h1>
+        <div class="heading-line"></div>
+        <p>Your ordered items</p>
+    </div>
+
+</section>
+
+<!-- Cart Section -->
+<div class="container">
+
+    <div class="cart-box" id="cartBox">
+
+        <table class="cart-table" id="cartTable">
+
+            <thead>
+                <tr>
+                    <th>Food Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="cartItems"></tbody>
+
+        </table>
+
+        <div class="cart-bottom" id="cartBottom">
+
+            <div class="total-row">
+                <span>Total Amount:</span>
+                <strong id="grandTotal">₹0</strong>
+            </div>
+
+            <div class="cart-actions">
+
+                <button class="clear-btn" onclick="clearCart()">
+                    <i class="fa-solid fa-trash"></i>
+                    Clear Cart
+                </button>
+
+                <button class="checkout-btn" onclick="checkout()">
+                    Proceed to Checkout
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Previous Orders -->
+    <section class="previous">
+
+        <h2>
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            Previous Orders
+        </h2>
+
+        <div class="history-box">
+
+            <table class="history-table">
+
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Items</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="orderHistory"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+</html>

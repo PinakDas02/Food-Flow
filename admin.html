@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Flow - Admin Panel</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="admin-container">
+
+    <!-- Top Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="image/logo.jpg" alt="Food Flow Logo">
+            <h2>Food <span>Flow</span></h2>
+        </div>
+
+        <div class="admin-profile">
+             <a href="index.html" class="back-website">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Website
+            </a>
+            <i class="fa-solid fa-user"></i>
+            <span>Admin</span>
+            <i class="fa-solid fa-right-from-bracket logout-icon"
+               onclick="logout()"></i>
+        </div>
+    </header>
+
+    <div class="main-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <ul>
+                <li class="active" onclick="showSection('dashboard', this)">
+                    <i class="fa-solid fa-gauge"></i>
+                    Dashboard
+                </li>
+
+                <li onclick="showSection('menu', this)">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Manage Menu
+                </li>
+
+                <li onclick="showSection('orders', this)">
+                    <i class="fa-solid fa-box"></i>
+                    Manage Orders
+                </li>
+
+                <li onclick="showSection('users', this)">
+                    <i class="fa-solid fa-users"></i>
+                    View Users
+                </li>
+
+                <li onclick="showSection('settings', this)">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </li>
+
+                <li onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </li>
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+
+            <!-- Dashboard -->
+            <section id="dashboard" class="page-section">
+                <h1>Admin Dashboard</h1>
+
+                <div class="stats-container">
+
+                    <div class="stat-card red">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <h3>Total Orders</h3>
+                       
+                    </div>
+
+                    <div class="stat-card green">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3>Total Users</h3>
+                      
+                    </div>
+
+                    <div class="stat-card yellow">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-user-clock"></i>
+                        </div>
+                        <h3>Pending Orders</h3>
+                        
+                    </div>
+
+                    <div class="stat-card purple">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Total Revenue</h3>
+                        
+                    </div>
+
+                </div>
+
+                <div class="recent-orders">
+
+                    <div class="section-heading">
+                        <h2>Recent Orders</h2>
+                        <span onclick="showSection('orders')">View All →</span>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Food Item</th>
+                                    <th>User</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                </div>
+            </section>
+
+            <!-- Other Sections -->
+            <section id="menu" class="page-section hidden">
+                <h1>Manage Menu</h1>
+                <p>Manage your canteen food items here.</p>
+            </section>
+
+            <section id="orders" class="page-section hidden">
+                <h1>Manage Orders</h1>
+                <p>View and manage all customer orders here.</p>
+            </section>
+
+            <section id="users" class="page-section hidden">
+                <h1>View Users</h1>
+                <p>View registered users here.</p>
+            </section>
+
+            <section id="settings" class="page-section hidden">
+                <h1>Settings</h1>
+                <p>Manage admin settings here.</p>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+
+</body>
+</html>
